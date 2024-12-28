@@ -1,0 +1,122 @@
+.cardContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start; /* Alignement des éléments au début */
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  width: 96%;
+  margin-top: 10px;
+  max-width: 100%;
+  overflow-x: auto; /* Définit un défilement horizontal */
+  scroll-behavior: smooth; /* Défilement fluide */
+  scrollbar-width: thin; /* Pour les navigateurs supportant les scrollbars */
+}
+
+.cards::-webkit-scrollbar {
+  height: 8px; /* Ajuste la hauteur de la scrollbar */
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* Couleur de la barre de défilement */
+  border-radius: 4px; /* Arrondi */
+}
+
+.cards::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7); /* Couleur plus sombre au survol */
+}
+
+.cards::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Fond de la scrollbar */
+}
+
+.card {
+  transition: all 0.5s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  max-width: 350px;
+  
+  background-size: cover;
+  background-color: rgba(30, 30, 30, 0.432);
+  padding: 13px;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cards::-webkit-scrollbar {
+  display: none; /* Cache les barres sur Chrome/Safari */
+}
+.cards {
+  -ms-overflow-style: none; /* Cache les barres sur Internet Explorer */
+  scrollbar-width: none; /* Cache les barres sur Firefox */
+}
+
+.cardhead {
+  
+  display: flex;
+  width: 100%;
+  height: 40%;
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-color: rgba(50, 50, 50, 0.208);
+  margin: 5px;
+  padding: 5px;
+  margin-top: -5px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover{
+    background-color:  rgb(0, 151, 78);
+
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 40px;
+}
+
+.title {
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+
+.desc {
+  margin: 5px;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: normal;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+}
+.containerHead {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}

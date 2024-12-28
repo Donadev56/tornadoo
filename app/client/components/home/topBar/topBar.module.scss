@@ -1,0 +1,53 @@
+// topBar.module.scss
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09); // Utilisation du gold
+  top: 0;
+  position: fixed;
+  padding: 8px 16px;
+  z-index: 1000;
+}
+
+.left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.menu {
+  padding: 3px;
+
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #5555552e;
+
+  &:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+}

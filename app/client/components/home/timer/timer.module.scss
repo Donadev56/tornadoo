@@ -1,0 +1,54 @@
+// src/components/CountdownTimer.module.scss
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  max-width: 400px;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(20px);
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid orange;
+  padding: 15px;
+  border-radius: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.number {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.ended {
+  font-size: 1.5em;
+  color: orange;
+}

@@ -1,0 +1,158 @@
+
+/* Sidebar styles */
+.sidebar {
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    transform: translateX(0px);
+    height: 100vh;
+    background-color: #000000;
+    border-right: 1px solid rgba(128, 128, 128, 0.064);
+    padding: 13px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    color: #ffffffc5;
+    background-image: url(../../../assets/blurs/blur1.png);
+    background-size: cover;
+  }
+  
+  .closeButton {
+    align-self: flex-end;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .sidebarMenu {
+    transition: all 0.5s;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+    width: 90%;
+    max-height: 100%;
+    overflow-y: scroll;
+
+
+  }
+  
+  .sidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    span {
+      width: 100%;
+    }
+  }
+  
+  .sidebarItem:hover {
+    background-color: #1b1b1b;
+  }
+  
+  .sidebarItem svg {
+    color: #ff9800;
+  }
+  
+  .inputSearch {
+    padding: 10px;
+    padding-left: 40px;
+    backdrop-filter: blur(10px);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #151515;
+    border-radius: 30px;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .searchContainer {
+    
+    padding: 5px;
+    gap: 5px;
+    position: relative;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    color: darkorange;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.677);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .divider {
+    border-radius: 20px;
+    padding: 10px;
+    background-size: cover;
+    background-color: rgba(128, 128, 128, 0.108);
+    backdrop-filter: blur(10px);
+    position: relative;
+    margin: 6px;
+  }
+  
+
+
+
+  @media (max-width: 768px) {
+
+    .sidebar {
+      position: fixed;
+      width: 270px;
+
+    }
+    
+  }
+  
+  @media (min-width: 768px) {
+  
+    .sidebar {
+    width: 20%;
+    top: 10%;
+    background-color: transparent;
+
+    }
+
+    .closeButton {
+        display: none;
+    }
+    .sidebar {
+        height: 100%;
+    }
+  }
