@@ -1,0 +1,132 @@
+.tableContainer {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 90px;
+    justify-content: right;
+    align-items: end;
+  }
+  
+  .tableTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .tableWrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    overflow: auto;
+  }
+  
+  .tableHeader,
+  .tableRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .tableHeader {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .tableRow {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .tableRow:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .tableRow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tableCell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  
+  .noData {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .right {
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .right {
+        align-items: end;
+
+    }
+
+    .tableWrapper {
+        width: 80%;
+
+    }
+  }
+
+
+
+.loaderContainer {
+  transition: all 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  left: 0%;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(35, 35, 35, 0.483);
+  backdrop-filter: blur(5px);
+}
+
+
+.loader {
+  width: 48px;
+  height: 6px;
+  display: block;
+  margin: auto;
+  position: relative;
+  border-radius: 4px;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: animloader 0.6s linear infinite;
+}
+
+@keyframes animloader {
+  0% { box-shadow: -10px 20px, 10px 35px , 0px 50px }
+  25% { box-shadow: 0px 20px ,  0px 35px, 10px 50px }
+  50% { box-shadow: 10px 20px, -10px 35px, 0px 50px }
+  75% { box-shadow: 0px 20px, 0px  35px, -10px 50px }
+  100% { box-shadow: -10px 20px, 10px  35px, 0px 50px}
+}

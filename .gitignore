@@ -15,11 +15,12 @@
 
 # next.js
 /.next/
+/images/
 /out/
 
 # production
 /build
-
+database.db
 # misc
 .DS_Store
 *.pem

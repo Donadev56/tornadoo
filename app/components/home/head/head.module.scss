@@ -1,0 +1,351 @@
+.head {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../../../assets/background/back1.jpg);
+  background-size: cover;
+}
+
+.text {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+.title {
+  position: relative;
+
+  display: flex;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.des {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.447);
+}
+
+.buttons {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin: 15px;
+  width: 80%;
+  margin-top: 10px;
+
+  button {
+    position: relative;
+
+    width: 100%;
+    height: 35px;
+    max-width: 250px;
+    border-radius: 30px;
+    background-color: orange;
+    font-weight: bold;
+    border: none;
+    color: white;
+    font-size: 17px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid rgb(255, 157, 0);
+      color: rgb(255, 157, 0);
+    }
+  }
+}
+
+.secondaryButton {
+  position: relative;
+
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+}
+
+.record {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  max-width: 250px;
+  background-color: rgba(26, 26, 26, 0.231);
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+
+  .recordTitle {
+    position: relative;
+
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.483);
+    margin: 10px;
+  }
+
+  .number {
+    position: relative;
+
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 728px) {
+  .secondaryButton {
+    flex-direction: row;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 728px) {
+  .secondaryButton {
+    flex-direction: column;
+  }
+  .buttons {
+    transition: all 0.5s;
+    flex-direction: column;
+    button {
+      transition: all 0.5s;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.loadingBar {
+  position: relative;
+
+  margin-top: 20px;
+  display: flex;
+  border-radius: 20px;
+  width: 70%;
+  border: 1px solid rgba(128, 128, 128, 0.534);
+  height: 20px;
+  padding: 7px;
+  color: white;
+  font-weight: bold;
+  .loadingInternalBar {
+    animation: linearLoadingEffect 4s infinite;
+    width: 59%;
+    border-radius: 10px;
+    display: flex;
+    background-color: white;
+  }
+
+  .percent {
+    position: absolute;
+    left: 50%;
+  }
+}
+
+@keyframes linearLoadingEffect {
+  0% {
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #e0e0e0 50%,
+      darkorange 100%
+    );
+    width: 56%;
+  }
+  25% {
+    background: linear-gradient(
+      90deg,
+      #f7f7f7 0%,
+      #d6d6d6 50%,
+      darkorange 100%
+    );
+    width: 57%;
+  }
+  50% {
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 0%,
+      #cccccc 50%,
+      darkorange 100%
+    );
+    width: 59%;
+  }
+  75% {
+    background: linear-gradient(
+      90deg,
+      #f7f7f7 0%,
+      #d6d6d6 50%,
+      darkorange 100%
+    );
+    width: 57%;
+  }
+  100% {
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #e0e0e0 50%,
+      darkorange 100%
+    );
+    width: 56%;
+  }
+}
+
+@keyframes barStripe {
+  0% {
+    background-position: 1em 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.loader {
+  margin-top: 10px;
+  width: 106px;
+  height: 56px;
+  display: block;
+  margin: 30px auto;
+  background-image: linear-gradient(#fff 50px, transparent 0),
+    linear-gradient(#fff 50px, transparent 0),
+    linear-gradient(#fff 50px, transparent 0),
+    linear-gradient(#fff 50px, transparent 0),
+    radial-gradient(circle 14px, #fff 100%, transparent 0);
+  background-size:
+    48px 15px,
+    15px 35px,
+    15px 35px,
+    25px 15px,
+    28px 28px;
+  background-position:
+    25px 5px,
+    58px 20px,
+    25px 17px,
+    2px 37px,
+    76px 0px;
+  background-repeat: no-repeat;
+  position: relative;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+  animation: leftToRight 2s;
+  box-sizing: border-box;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  left: -45px;
+  top: -10px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#fff 64px, transparent 0),
+    linear-gradient(#fff 66px, transparent 0),
+    radial-gradient(circle 4px, #fff 100%, transparent 0);
+  background-size:
+    40px 1px,
+    1px 40px,
+    8px 8px;
+  background-position: center center;
+  box-sizing: border-box;
+  animation: rotation 0.3s linear infinite;
+}
+.loader::before {
+  left: 25px;
+  top: 60px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text2 {
+  margin-top: 30px;
+  color: rgb(0, 255, 136);
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.screenShoots {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  transition: all 0.5s;
+}
+.screenContainers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.5s;
+
+}
+
+.s {
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .screenContainers {
+    flex-direction: row;
+  }
+}
+
+.topMetadata {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  p {
+    color: rgba(255, 255, 255, 0.692);
+  }
+}
